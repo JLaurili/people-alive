@@ -9,6 +9,8 @@
 #include <unordered_map>
 #include <vector>
 
+// Modified
+
 class People
 {
 public:
@@ -183,7 +185,6 @@ public:
 				break;
 			}
 
-			// Store alive years
 			for (int i = birth - firstYear; i <= death - firstYear; ++i)
 				inputs[i]++;
 		}
