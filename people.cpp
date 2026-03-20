@@ -81,7 +81,7 @@ public:
 
 		// find year index with most people alive
 		// NOTE: a tie would be resolved as the first year with the max count
-		for (int i = 0; i <= yearsRange; ++i)
+		for (int i = 0; i < yearsRange; ++i)
 		{
 			if (alivePerYear[i] > alivePerYear[targetYear])
 				targetYear = i;
@@ -133,7 +133,7 @@ public:
 		// traverse births and deaths to determine the max alive count
 		unsigned long long int alive = 1, maxAlive = 1;
 		int bi = 1, di = 0;
-		int maxYear = 0;
+		int maxYear = births[0];
 		int dataSize = static_cast<int>(births.size());
 
 		while (bi < dataSize && di < dataSize)
